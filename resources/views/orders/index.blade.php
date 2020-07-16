@@ -45,7 +45,7 @@
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Find Product">
-                                    <span class="btn input-group-addon btn-primary"><i class="fa fa-search"></i></span>
+                                    <span class="btn input-group-addon btn-primary" data-toggle="modal" data-target=".product"><i class="fa fa-search"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -98,8 +98,8 @@
                         <td>0</td>
                         <td>90000</td>
                         <td>
-                            <button class="btn btn-primary">abc</button>
-                            <button class="btn btn-primary">abc</button>
+                            <button class="btn btn-primary"><i class="fa fa-pencil"></i> Update</button>
+                            <button class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
                         </td>
                     </tr>
                 </tbody>
@@ -164,20 +164,68 @@
             <div class="col-sm-3">
                 <div class="info-box form-horizontal">
                     <div class="box-body">
-                        <button type="button" class="mb-1 btn btn-primary btn-block">.btn-block</button>
-                        <button type="button" class="mb-1 btn btn-primary btn-block">.btn-block</button>
+                        <button type="button" class="mb-1 btn btn-warning btn-block"><i class="fa fa-pencil"></i> Cancel</button>
+                        <button type="button" class="mb-1 btn btn-success btn-block"><i class="fa fa-pencil"></i> Process Payment</button>
                         
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+<div class="modal fade product" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>Barcode</th>
+                <th>Name</th>
+                <th>Unit</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1 Data 1</td>
+                <td>Kentang</td>
+                <td>Row 1 Data 2</td>
+                <td>Row 1 Data 2</td>
+                <td>Row 1 Data 2</td>
+                <td>Row 1 Data 2</td>
+            </tr>
+            <tr>
+                <td>Row 1 Data 1</td>
+                <td>Bawang</td>
+                <td>Row 1 Data 2</td>
+                <td>Row 1 Data 2</td>
+                <td>Row 1 Data 2</td>
+                <td>Row 1 Data 2</td>
+            </tr>
+        </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
 @endsection
 
 
 @push('scripts')
 
     <script type="text/javascript">
+    $('#table_id').DataTable();
     var app = new Vue({
             el: '#app',
             data: {
@@ -189,7 +237,9 @@
             useCurrent: true,
             sideBySide: true
         })
-        
+        $('#myModal').on('hidden.bs.modal', function (e) {
+        // do something...
+        })
 
     </script>
 @endpush
