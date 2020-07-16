@@ -23,7 +23,14 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
-
+    <style>
+        .form-horizontal .control-label{
+            text-align:left;
+        }
+        .payment-price{
+            text-align:right;
+        }
+    </style>
     @yield('css')
 </head>
 
@@ -157,9 +164,49 @@
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/js/adminlte.min.js"></script>
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js"></script>
+    
+    <script src="https://unpkg.com/vue-select@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"  ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/id.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuejs-datepicker"></script>
+    <script src="https://unpkg.com/vuejs-datepicker/dist/locale/translations/id.js"></script>
+
+    <script src="https://unpkg.com/vue-swal"></script>
+    <script>
+        const ajax = axios.create({
+            baseURL: "{{ URL::to('webAPI') }}",
+        });
+
+        Vue.component('v-select', VueSelect.VueSelect)
+        Vue.mixin({
+            mounted: function() {
+
+            },
+            components: {
+                vuejsDatepicker
+            },
+            methods: {
+                getMoment: function(date, formats){
+                    return moment(date).format(formats)
+                },
+                getMomentAgo: function(date){
+                    return moment(date).fromNow();
+                },
+                admin:function(){
+                    window.location.href = "{{ url('/admin') }}";
+                },
+                admJad:function(){
+                    window.location.href = "{{ url('/admin/jadwal-admin') }}";
+                }
+            }
+        })
+    </script>
 
     @stack('scripts')
 </body>
