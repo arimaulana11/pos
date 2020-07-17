@@ -43,3 +43,11 @@
     </ul>
 </li>
 
+<li class="{{ Request::is('orderTemps*') ? 'active' : '' }}">
+    <a href="{{ route('orderTemps.index') }}"><i class="fa fa-edit"></i><span>Order Temps</span></a>
+</li>
+
+<li class="{{ Request::is('orderDetailTemps*') ? 'active' : '' }}">
+    <a href="{{ route('orderDetailTemps.index') }}"><i class="fa fa-edit"></i><span>Order Detail Temps</span></a>
+</li>
+

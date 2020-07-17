@@ -2,16 +2,16 @@
 
 namespace App\Repositories;
 
-use App\Models\order;
+use App\Models\order_temp;
 use App\Repositories\BaseRepository;
 
 /**
- * Class orderRepository
+ * Class order_tempRepository
  * @package App\Repositories
- * @version July 17, 2020, 2:50 am UTC
+ * @version July 17, 2020, 2:54 am UTC
 */
 
-class orderRepository extends BaseRepository
+class order_tempRepository extends BaseRepository
 {
     /**
      * @var array
@@ -44,6 +44,6 @@ class orderRepository extends BaseRepository
      **/
     public function model()
     {
-        return order::class;
+        return order_temp::class;
     }
 }

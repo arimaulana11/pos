@@ -37,3 +37,8 @@ Route::resource('roles', 'roleController');
 Route::resource('roleDetails', 'role_detailController');
 
 Route::resource('users', 'UserController')->middleware('auth');
+
+
+Route::resource('orderTemps', 'order_tempController');
+
+Route::resource('orderDetailTemps', 'order_detail_tempController');

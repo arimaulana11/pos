@@ -1,4 +1,5 @@
-[{
+[
+    {
         "name": "id",
         "dbType": "increments",
         "htmlType": "",
@@ -11,21 +12,9 @@
         "inView": false
     },
     {
-        "name": "barcode",
-        "dbType": "string",
-        "htmlType": "text",
-        "validations": "required",
-        "searchable": true,
-        "fillable": true,
-        "primary": false,
-        "inForm": true,
-        "inIndex": true,
-        "inView": true
-    },
-    {
-        "name": "id_company",
+        "name": "id_order",
         "dbType": "integer",
-        "htmlType": "text",
+        "htmlType": "number",
         "validations": "required",
         "searchable": true,
         "fillable": true,
@@ -35,21 +24,9 @@
         "inView": true
     },
     {
-        "name": "nama",
-        "dbType": "string",
-        "htmlType": "text",
-        "validations": "required",
-        "searchable": true,
-        "fillable": true,
-        "primary": false,
-        "inForm": true,
-        "inIndex": true,
-        "inView": true
-    },
-    {
-        "name": "harga",
+        "name": "id_barang",
         "dbType": "integer",
-        "htmlType": "text",
+        "htmlType": "number",
         "validations": "required",
         "searchable": true,
         "fillable": true,
@@ -59,22 +36,9 @@
         "inView": true
     },
     {
-        "name": "stok",
+        "name": "qty",
         "dbType": "integer",
-        "htmlType": "text",
-        "validations": "required",
-        "searchable": true,
-        "fillable": true,
-        "primary": false,
-        "inForm": true,
-        "inIndex": true,
-        "inView": true
-    },
-
-    {
-        "name": "category",
-        "dbType": "integer",
-        "htmlType": "text",
+        "htmlType": "number",
         "validations": "required",
         "searchable": true,
         "fillable": true,

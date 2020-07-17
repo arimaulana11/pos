@@ -2,31 +2,24 @@
 
 namespace App\Repositories;
 
-use App\Models\order;
+use App\Models\order_detail_temp;
 use App\Repositories\BaseRepository;
 
 /**
- * Class orderRepository
+ * Class order_detail_tempRepository
  * @package App\Repositories
- * @version July 17, 2020, 2:50 am UTC
+ * @version July 17, 2020, 2:55 am UTC
 */
 
-class orderRepository extends BaseRepository
+class order_detail_tempRepository extends BaseRepository
 {
     /**
      * @var array
      */
     protected $fieldSearchable = [
-        'id_company',
-        'id_user',
-        'payment_code',
-        'tanggal',
-        'subtotal',
-        'grand_total',
-        'discount',
-        'cash',
-        'change',
-        'note'
+        'id_order',
+        'id_barang',
+        'qty'
     ];
 
     /**
@@ -44,6 +37,6 @@ class orderRepository extends BaseRepository
      **/
     public function model()
     {
-        return order::class;
+        return order_detail_temp::class;
     }
 }

@@ -6,9 +6,9 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class order
+ * Class order_temp
  * @package App\Models
- * @version July 17, 2020, 2:50 am UTC
+ * @version July 17, 2020, 2:54 am UTC
  *
  * @property integer $id_company
  * @property integer $id_user
@@ -21,11 +21,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property integer $change
  * @property string $note
  */
-class order extends Model
+class order_temp extends Model
 {
     use SoftDeletes;
 
-    public $table = 'orders';
+    public $table = 'order_temps';
     
 
     protected $dates = ['deleted_at'];
