@@ -8,12 +8,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class role_detail
  * @package App\Models
- * @version July 9, 2020, 11:23 am UTC
+ * @version October 16, 2020, 12:47 am UTC
  *
  * @property integer $id_menu
  * @property integer $id_role
- * @property integer $id_company
- * @property string $action
+ * @property boolean $read
+ * @property boolean $create
+ * @property boolean $edit
+ * @property boolean $delete
  */
 class role_detail extends Model
 {
@@ -29,8 +31,10 @@ class role_detail extends Model
     public $fillable = [
         'id_menu',
         'id_role',
-        'id_company',
-        'action'
+        'read',
+        'create',
+        'edit',
+        'delete'
     ];
 
     /**
@@ -42,8 +46,10 @@ class role_detail extends Model
         'id' => 'integer',
         'id_menu' => 'integer',
         'id_role' => 'integer',
-        'id_company' => 'integer',
-        'action' => 'string'
+        'read' => 'boolean',
+        'create' => 'boolean',
+        'edit' => 'boolean',
+        'delete' => 'boolean'
     ];
 
     /**
@@ -53,9 +59,7 @@ class role_detail extends Model
      */
     public static $rules = [
         'id_menu' => 'required',
-        'id_role' => 'required',
-        'id_company' => 'required',
-        'action' => 'required'
+        'id_role' => 'required'
     ];
 
     

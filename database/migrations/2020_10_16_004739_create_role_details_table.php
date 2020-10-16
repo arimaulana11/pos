@@ -18,8 +18,10 @@ class CreateRoleDetailsTable extends Migration
             $table->increments('id');
             $table->integer('id_menu');
             $table->integer('id_role');
-            $table->integer('id_company');
-            $table->string('action');
+            $table->boolean('read');
+            $table->boolean('create');
+            $table->boolean('edit');
+            $table->boolean('delete');
             $table->timestamps();
             $table->softDeletes();
         });

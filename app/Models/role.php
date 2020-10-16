@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class role
  * @package App\Models
- * @version July 9, 2020, 11:23 am UTC
+ * @version October 14, 2020, 8:55 am UTC
  *
- * @property integer $id_company
+ * @property integer $id_user
  * @property string $name
  */
 class role extends Model
@@ -25,7 +25,7 @@ class role extends Model
 
 
     public $fillable = [
-        'id_company',
+        'id_user',
         'name'
     ];
 
@@ -36,7 +36,7 @@ class role extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'id_company' => 'integer',
+        'id_user' => 'integer',
         'name' => 'string'
     ];
 
@@ -46,7 +46,7 @@ class role extends Model
      * @var array
      */
     public static $rules = [
-        'id_company' => 'required',
+        'id_user' => 'required',
         'name' => 'required'
     ];
 

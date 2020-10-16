@@ -8,7 +8,7 @@ use App\Repositories\BaseRepository;
 /**
  * Class role_detailRepository
  * @package App\Repositories
- * @version July 9, 2020, 11:23 am UTC
+ * @version October 16, 2020, 12:47 am UTC
 */
 
 class role_detailRepository extends BaseRepository
@@ -19,8 +19,10 @@ class role_detailRepository extends BaseRepository
     protected $fieldSearchable = [
         'id_menu',
         'id_role',
-        'id_company',
-        'action'
+        'read',
+        'create',
+        'edit',
+        'delete'
     ];
 
     /**

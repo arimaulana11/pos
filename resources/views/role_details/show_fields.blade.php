@@ -10,16 +10,28 @@
     <p>{{ $roleDetail->id_role }}</p>
 </div>
 
-<!-- Id Company Field -->
+<!-- Read Field -->
 <div class="form-group">
-    {!! Form::label('id_company', 'Id Company:') !!}
-    <p>{{ $roleDetail->id_company }}</p>
+    {!! Form::label('read', 'Read:') !!}
+    <p>{{ $roleDetail->read }}</p>
 </div>
 
-<!-- Action Field -->
+<!-- Create Field -->
 <div class="form-group">
-    {!! Form::label('action', 'Action:') !!}
-    <p>{{ $roleDetail->action }}</p>
+    {!! Form::label('create', 'Create:') !!}
+    <p>{{ $roleDetail->create }}</p>
+</div>
+
+<!-- Edit Field -->
+<div class="form-group">
+    {!! Form::label('edit', 'Edit:') !!}
+    <p>{{ $roleDetail->edit }}</p>
+</div>
+
+<!-- Delete Field -->
+<div class="form-group">
+    {!! Form::label('delete', 'Delete:') !!}
+    <p>{{ $roleDetail->delete }}</p>
 </div>
 
 <!-- Created At Field -->

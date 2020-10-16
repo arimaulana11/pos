@@ -2,7 +2,7 @@
     <table class="table" id="roles-table">
         <thead>
             <tr>
-                <th>Id Company</th>
+                <th>Id User</th>
         <th>Name</th>
                 <th colspan="3">Action</th>
             </tr>
@@ -10,7 +10,7 @@
         <tbody>
         @foreach($roles as $role)
             <tr>
-                <td>{{ $role->id_company }}</td>
+                <td>{{ $role->id_user }}</td>
             <td>{{ $role->name }}</td>
                 <td>
                     {!! Form::open(['route' => ['roles.destroy', $role->id], 'method' => 'delete']) !!}

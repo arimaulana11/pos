@@ -10,8 +10,10 @@ $factory->define(role_detail::class, function (Faker $faker) {
     return [
         'id_menu' => $faker->randomDigitNotNull,
         'id_role' => $faker->randomDigitNotNull,
-        'id_company' => $faker->randomDigitNotNull,
-        'action' => $faker->word,
+        'read' => $faker->word,
+        'create' => $faker->word,
+        'edit' => $faker->word,
+        'delete' => $faker->word,
         'created_at' => $faker->date('Y-m-d H:i:s'),
         'updated_at' => $faker->date('Y-m-d H:i:s')
     ];

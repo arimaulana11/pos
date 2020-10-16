@@ -1,7 +1,7 @@
-<!-- Id Company Field -->
+<!-- Id User Field -->
 <div class="form-group">
-    {!! Form::label('id_company', 'Id Company:') !!}
-    <p>{{ $role->id_company }}</p>
+    {!! Form::label('id_user', 'Id User:') !!}
+    <p>{{ $role->id_user }}</p>
 </div>
 
 <!-- Name Field -->

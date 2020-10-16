@@ -12,7 +12,7 @@
         "inView": false
     },
     {
-        "name": "id_company",
+        "name": "id_user",
         "dbType": "integer",
         "htmlType": "number",
         "validations": "required",

@@ -1,7 +1,7 @@
-<!-- Id Company Field -->
+<!-- Id User Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('id_company', 'Id Company:') !!}
-    {!! Form::number('id_company', null, ['class' => 'form-control']) !!}
+    {!! Form::label('id_user', 'Id User:') !!}
+    {!! Form::number('id_user', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Name Field -->

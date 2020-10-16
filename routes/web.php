@@ -13,9 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () { return view('welcome'); });
+
+Route::get('/role-check', 'RoleController@check');
+
 
 Auth::routes(['verify' => true]);
 
@@ -36,9 +37,12 @@ Route::resource('roles', 'roleController');
 
 Route::resource('roleDetails', 'role_detailController');
 
-Route::resource('users', 'UserController')->middleware('auth');
+Route::resource('users', 'UserController');
 
 
 Route::resource('orderTemps', 'order_tempController');
 
 Route::resource('orderDetailTemps', 'order_detail_tempController');
+
+
+Route::resource('roleDetails', 'role_detailController');

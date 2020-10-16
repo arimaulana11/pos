@@ -4,8 +4,10 @@
             <tr>
                 <th>Id Menu</th>
         <th>Id Role</th>
-        <th>Id Company</th>
-        <th>Action</th>
+        <th>Read</th>
+        <th>Create</th>
+        <th>Edit</th>
+        <th>Delete</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
@@ -14,8 +16,10 @@
             <tr>
                 <td>{{ $roleDetail->id_menu }}</td>
             <td>{{ $roleDetail->id_role }}</td>
-            <td>{{ $roleDetail->id_company }}</td>
-            <td>{{ $roleDetail->action }}</td>
+            <td>{{ $roleDetail->read }}</td>
+            <td>{{ $roleDetail->create }}</td>
+            <td>{{ $roleDetail->edit }}</td>
+            <td>{{ $roleDetail->delete }}</td>
                 <td>
                     {!! Form::open(['route' => ['roleDetails.destroy', $roleDetail->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

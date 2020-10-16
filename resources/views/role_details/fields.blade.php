@@ -10,17 +10,45 @@
     {!! Form::number('id_role', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Id Company Field -->
+<!-- 'bootstrap / Toggle Switch Read Field' -->
 <div class="form-group col-sm-6">
-    {!! Form::label('id_company', 'Id Company:') !!}
-    {!! Form::number('id_company', null, ['class' => 'form-control']) !!}
+    {!! Form::label('read', 'Read:') !!}
+    <label class="checkbox-inline">
+        {!! Form::hidden('read', 0) !!}
+        {!! Form::checkbox('read', 1, null,  ['data-toggle' => 'toggle']) !!}
+    </label>
 </div>
 
-<!-- Action Field -->
+
+<!-- 'bootstrap / Toggle Switch Create Field' -->
 <div class="form-group col-sm-6">
-    {!! Form::label('action', 'Action:') !!}
-    {!! Form::text('action', null, ['class' => 'form-control']) !!}
+    {!! Form::label('create', 'Create:') !!}
+    <label class="checkbox-inline">
+        {!! Form::hidden('create', 0) !!}
+        {!! Form::checkbox('create', 1, null,  ['data-toggle' => 'toggle']) !!}
+    </label>
 </div>
+
+
+<!-- 'bootstrap / Toggle Switch Edit Field' -->
+<div class="form-group col-sm-6">
+    {!! Form::label('edit', 'Edit:') !!}
+    <label class="checkbox-inline">
+        {!! Form::hidden('edit', 0) !!}
+        {!! Form::checkbox('edit', 1, null,  ['data-toggle' => 'toggle']) !!}
+    </label>
+</div>
+
+
+<!-- 'bootstrap / Toggle Switch Delete Field' -->
+<div class="form-group col-sm-6">
+    {!! Form::label('delete', 'Delete:') !!}
+    <label class="checkbox-inline">
+        {!! Form::hidden('delete', 0) !!}
+        {!! Form::checkbox('delete', 1, null,  ['data-toggle' => 'toggle']) !!}
+    </label>
+</div>
+
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
