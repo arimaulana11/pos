@@ -39,10 +39,9 @@ Route::resource('roleDetails', 'role_detailController');
 
 Route::resource('users', 'UserController');
 
-
 Route::resource('orderTemps', 'order_tempController');
 
 Route::resource('orderDetailTemps', 'order_detail_tempController');
 
 
-Route::resource('roleDetails', 'role_detailController');
+Route::get('get-barang','barangController@getBarang');

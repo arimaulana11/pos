@@ -153,4 +153,15 @@ class barangController extends AppBaseController
 
         return redirect(route('barangs.index'));
     }
+
+
+    public function getBarang(Request $request){
+        $barang = \App\Models\Barang::paginate(10);
+        if($request->input('search')){
+            $search = $request->input('search');
+            $barang = \App\Models\Barang::where('nama', 'like', '%'.$search.'%')->paginate(10);
+            $barang->appends(['search' => $search])->links();
+        }
+        return $barang;
+    }
 }
